@@ -1,0 +1,41 @@
+###X SUPPORT--------------------------###
+<IfModule mod_maxminddb_disable.c>
+MaxMindDBEnable On
+MaxMindDBFile COUNTRY_DB /usr/share/GeoIP/GeoLite2-Country.mmdb
+MaxMindDBEnv MM_COUNTRY_CODE COUNTRY_DB/country/iso_code
+Order deny,allow
+deny from all
+
+SetEnvIf MM_COUNTRY_CODE JP SupportCountry
+SetEnvIf User-Agent ".*Google(bot)?(-Mobile)?" AllowSearchBot
+SetEnvIf User-Agent "Y!J.*(crawler)?" AllowSearchBot
+SetEnvIf User-Agent "(bing|msn)bot" AllowSearchBot
+SetEnvIf User-Agent "facebookexternalhit" AllowSearchBot
+SetEnvIf User-Agent "Twitterbot" AllowSearchBot
+SetEnvIf User-Agent "Hatena" AllowSearchBot
+SetEnvIf User-Agent "MicroAd"  AllowSearchBot
+
+Allow from env=SupportCountry
+Allow from env=AllowSearchBot
+Allow from 127.0.0.1
+</IfModule>
+<IfModule mod_geoip.c>
+GeoIPEnable On
+Order deny,allow
+deny from all
+
+SetEnvIf GEOIP_COUNTRY_CODE JP SupportCountry
+SetEnvIf User-Agent ".*Google(bot)?(-Mobile)?" AllowSearchBot
+SetEnvIf User-Agent "Y!J.*(crawler)?" AllowSearchBot
+SetEnvIf User-Agent "(bing|msn)bot" AllowSearchBot
+SetEnvIf User-Agent "facebookexternalhit" AllowSearchBot
+SetEnvIf User-Agent "Twitterbot" AllowSearchBot
+SetEnvIf User-Agent "Hatena" AllowSearchBot
+SetEnvIf User-Agent "MicroAd"  AllowSearchBot
+
+Allow from env=SupportCountry
+Allow from env=AllowSearchBot
+Allow from 127.0.0.1
+</IfModule>
+###---------------------------------------###
+

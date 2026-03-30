@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>お問い合わせ｜司法書士法人ホープス</title>
+    <meta
+      name="description"
+      content="相続手続きや遺言書作成、不動産登記手続き、会社設立・商業登記手続きでお困りの方は司法書士法人ホープスまでお問い合わせください。"
+    />
+    <link rel="stylesheet" href="//use.typekit.net/ray5xjz.css" />
+    <link rel="preconnect" href="//fonts.googleapis.com" />
+    <link rel="preconnect" href="//fonts.gstatic.com" crossorigin />
+    <link
+      href="//fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/swiper8.1.5-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <script src="./assets/js/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/swiper8.1.5-bundle.min.js"></script>
+    <script src="./assets/js/smooth-scroll.min.js"></script>
+    <script src="./assets/js/picturefill.min.js"></script>
+    <script src="./assets/js/fitie.js"></script>
+    <script src="./assets/js/bundle.js" defer></script>
+  </head>
+
+  <body class="contact-page">
+    <header id="header" class="header">
+      <div class="header__left">
+        <div class="logo">
+          <a href="./">
+            <span class="mincho">司法書士法人ホープス</span
+            ><span class="baskerville">Hopes</span>
+          </a>
+        </div>
+      </div>
+      <div class="header__right">
+        <ul>
+          <li>
+            <a href="./" id="home" class="">
+              ホーム
+              <span class="vollkorn">Home</span>
+              <img src="./assets/images/sp-arrow.png" alt="" class="arrow" />
+            </a>
+          </li>
+          <li>
+            <a href="./about.html" id="about">
+              私たちについて
+              <span class="vollkorn">About us</span>
+              <img src="./assets/images/sp-arrow.png" alt="" class="arrow" />
+            </a>
+          </li>
+          <li>
+            <a href="./service.html" id="service">
+              サービス内容
+              <span class="vollkorn">Service</span>
+              <img src="./assets/images/sp-arrow.png" alt="" class="arrow" />
+            </a>
+          </li>
+          <li>
+            <a href="./price.html" id="price">
+              料金表
+              <span class="vollkorn">Price</span>
+              <img src="./assets/images/sp-arrow.png" alt="" class="arrow" />
+            </a>
+          </li>
+          <li>
+            <a href="./profile.html" id="profile">
+              事務所概要
+              <span class="vollkorn">Profile</span>
+              <img src="./assets/images/sp-arrow.png" alt="" class="arrow" />
+            </a>
+          </li>
+          <li>
+            <a href="./contact.html" id="" class="lg">
+              お問い合わせ
+              <span class="vollkorn">Contact</span>
+              <img src="./assets/images/sp-arrow.png" alt="" class="arrow" />
+            </a>
+          </li>
+          <li class="privacy">
+            <a href="./privacy.html" id="privacy">
+              プライバシーポリシー
+              <img src="./assets/images/sp-arrow.png" alt="" class="arrow" />
+            </a>
+          </li>
+          <li>
+            <a href="./contact.html" class="contact">
+              <span>お問い合わせ</span>
+              <img
+                src="./assets/images/mail-white.png"
+                alt="メール"
+                class="mail white"
+              />
+              <img
+                src="./assets/images/mail-blue.png"
+                alt="メール"
+                class="mail blue"
+              />
+              <span class="vollkorn">Contact</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div id="burger" class="burger">
+        <div class="box">
+          <div class="box__top">
+            <div></div>
+          </div>
+          <div class="box__bottom">
+            <span>MENU</span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="sec sec01">
+        <div class="container">
+          <div class="inner">
+            <div class="main-title">
+              <span class="vollkorn">Contact</span>
+              <h1>お問い合わせ</h1>
+            </div>
+            <div class="txt">
+              <p>
+                下記のフォームに必要項目を入力の上、<br
+                  class="sp"
+                />「確認画面へ進む」ボタンを押してください。
+              </p>
+            </div>
+            <div class="form-area">
+              <form action="./contact.php" method="post">
+                <dl>
+                  <dt>
+                    <span>お問い合わせ内容</span>
+                    <span class="label red">必須</span>
+                  </dt>
+                  <dd>
+                    <select class="select-test" name="list" required>
+                      <option value="">内容を選択してください。</option>
+                      <option value="相続手続について">相続手続について</option>
+                      <option value="遺言書作成支援について">
+                        遺言書作成支援について
+                      </option>
+                      <option value="不動産登記手続について">
+                        不動産登記手続について
+                      </option>
+                      <option value="会社設立・商業登記手続について">
+                        会社設立・商業登記手続について
+                      </option>
+                      <option value="その他">その他</option>
+                    </select>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>
+                    <span>お名前（漢字）</span>
+                    <span class="label red">必須</span>
+                  </dt>
+                  <dd>
+                    <input
+                      class="text-test"
+                      type="text"
+                      name="name"
+                      placeholder="例）田中　太郎"
+                      required
+                    />
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>
+                    <span>お名前（カナ）</span>
+                    <span class="label red">必須</span>
+                  </dt>
+                  <dd>
+                    <input
+                      class="text-test"
+                      type="text"
+                      name="kana"
+                      placeholder="例）タナカ　タロウ"
+                      required
+                    />
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>
+                    <span>メールアドレス</span>
+                    <span class="label red">必須</span>
+                  </dt>
+                  <dd>
+                    <input
+                      class="text-test"
+                      type="email"
+                      name="email"
+                      placeholder="例）example@hopes.com"
+                      required
+                    />
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>
+                    <span>電話番号</span>
+                    <span class="label">任意</span>
+                  </dt>
+                  <dd>
+                    <input
+                      class="text-test"
+                      type="text"
+                      name="tel"
+                      placeholder="例）090-0000-0000"
+                    />
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>
+                    <span>面談日時　第1希望</span>
+                    <span class="label">任意</span>
+                  </dt>
+                  <dd>
+                    <input
+                      class="text-test"
+                      type="text"
+                      placeholder="例）3月1日（水）10:00〜11:00"
+                      name="hope1"
+                    />
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>
+                    <span>面談日時　第2希望</span>
+                    <span class="label">任意</span>
+                  </dt>
+                  <dd>
+                    <input
+                      class="text-test"
+                      type="text"
+                      placeholder="例）3月1日（水）10:00〜11:00"
+                      name="hope2"
+                    />
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>
+                    <span>面談日時　第3希望</span>
+                    <span class="label">任意</span>
+                  </dt>
+                  <dd>
+                    <input
+                      class="text-test"
+                      type="text"
+                      placeholder="例）3月1日（水）10:00〜11:00"
+                      name="hope3"
+                    />
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>
+                    <span>面談方法</span>
+                    <span class="label">任意</span>
+                  </dt>
+                  <dd>
+                    <label
+                      ><input
+                        class="radio-test"
+                        type="radio"
+                        name="method"
+                        value="対面"
+                      /><span>対面</span></label
+                    >
+                    <label
+                      ><input
+                        class="radio-test"
+                        type="radio"
+                        name="method"
+                        value="オンライン"
+                      /><span>オンライン</span></label
+                    >
+                  </dd>
+                </dl>
+                <dl class="top">
+                  <dt>
+                    <span>お問い合わせ詳細</span>
+                    <span class="label red">必須</span>
+                  </dt>
+                  <dd>
+                    <textarea
+                      class="textarea-test"
+                      name="content"
+                      required
+                    ></textarea>
+                  </dd>
+                </dl>
+                <p class="privacy">
+                  <a href="./privacy.html">プライバシーポリシー</a
+                  >をお読みいただき、<br class="sp" />同意の上送信してください。
+                </p>
+                <div class="btn-area">
+                  <button class="btn bgskew">
+                    <span class="vollkorn">確認画面へ</span>
+                    <img
+                      src="./assets/images/arrow-right-white.png"
+                      alt=""
+                      class="arrow white"
+                    />
+                    <img
+                      src="./assets/images/arrow-right-blue.png"
+                      alt=""
+                      class="arrow blue"
+                    />
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="footer" class="footer sec">
+      <div class="container">
+        <div class="inner">
+          <div class="item">
+            <div class="item__left">
+              <a href="./"> 司法書士法人ホープス </a>
+              <p class="copy-right">©︎2022 司法書士法人ホープス.</p>
+            </div>
+            <div class="item__right">
+              <ul>
+                <li>
+                  <a href="./">ホーム</a>
+                </li>
+                <li>
+                  <a href="./about.html">私たちについて</a>
+                </li>
+                <li>
+                  <a href="./service.html">サービス内容</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="./price.html">料金表</a>
+                </li>
+                <li>
+                  <a href="./profile.html">事務所概要</a>
+                </li>
+                <li class="sp">
+                  <a href="./contact.html">お問い合わせ</a>
+                </li>
+                <li>
+                  <a href="./privacy.html">プライバシーポリシー</a>
+                </li>
+              </ul>
+              <ul>
+                <p class="address">
+                  〒150-0002<br />
+                  東京都渋谷区渋谷二丁目2番4号<br />
+                  青山アルコープ402号室
+                </p>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="page-top">
+        <a href="#" class="circle">
+          <img src="./assets/images/arrow-top-blue.png" alt="" class="blue" />
+          <img src="./assets/images/arrow-top-white.png" alt="" class="white" />
+        </a>
+        <span class="vollkorn">Page top</span>
+      </div>
+    </footer>
+  </body>
+</html>
