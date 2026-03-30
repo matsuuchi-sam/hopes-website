@@ -580,8 +580,8 @@
       header.classList.toggle('scrolled', sy > 40);
       backToTop.classList.toggle('visible', sy > 500);
 
-      /* Parallax on hero background */
-      if (heroBg && sy < 900) {
+      /* Parallax on hero background — disable on mobile */
+      if (heroBg && sy < 900 && window.innerWidth > 768) {
         heroBg.style.transform = 'translateY(' + (sy * 0.25) + 'px)';
       }
     }, { passive: true });

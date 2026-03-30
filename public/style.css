@@ -1233,6 +1233,7 @@ section { padding: clamp(var(--space-10), 8vw, var(--space-16)) 0; }
 
   .price-table { font-size: 0.78rem; }
   .price-table th, .price-table td { padding: 10px 10px; }
+  .price-table thead th { white-space: nowrap; }
 
   .asanoha-accent { display: none; }
 }
