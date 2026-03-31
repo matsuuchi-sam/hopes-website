@@ -176,7 +176,8 @@ if (empty($message))       $errors[] = 'お問い合わせ詳細を入力して�
     const hamburger = document.getElementById('hamburger');
     const navList = document.getElementById('navList');
     hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
+      const isOpen = hamburger.classList.toggle('active');
+      hamburger.setAttribute('aria-expanded', isOpen);
       navList.classList.toggle('active');
     });
     navList.querySelectorAll('a').forEach(link => {

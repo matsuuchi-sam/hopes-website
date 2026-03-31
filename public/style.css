@@ -3,7 +3,7 @@
    和韻 × 洗練 — 格調ある和のデザイン
    ============================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap');
 
 /* ============================================
    DESIGN TOKENS
@@ -317,14 +317,14 @@ section { padding: clamp(var(--space-10), 8vw, var(--space-16)) 0; }
   position: relative;
   min-height: min(75vh, 680px);
   max-height: 720px;
-  display: flex; align-items: flex-end;
-  padding: 100px 0 40px;
+  display: flex; align-items: center; justify-content: center;
+  padding: 120px 0 60px;
   overflow: hidden;
 }
 
 .hero-bg {
   position: absolute; inset: -20px;
-  background: url('images/hero-bg.jpg') center 40% / cover no-repeat;
+  background: url('images/hero-bg.png') center center / cover no-repeat;
   will-change: transform;
 }
 
@@ -333,9 +333,9 @@ section { padding: clamp(var(--space-10), 8vw, var(--space-16)) 0; }
   content: "";
   position: absolute; inset: 0;
   background:
-    radial-gradient(ellipse at 20% 50%, rgba(28, 25, 22, 0.5) 0%, transparent 70%),
-    radial-gradient(ellipse at 80% 80%, rgba(28, 25, 22, 0.2) 0%, transparent 50%),
-    linear-gradient(160deg, rgba(28, 25, 22, 0.45) 0%, rgba(28, 25, 22, 0.15) 60%, rgba(28, 25, 22, 0.35) 100%);
+    radial-gradient(ellipse at 20% 50%, rgba(28, 25, 22, 0.6) 0%, transparent 70%),
+    radial-gradient(ellipse at 80% 80%, rgba(28, 25, 22, 0.3) 0%, transparent 50%),
+    linear-gradient(160deg, rgba(28, 25, 22, 0.6) 0%, rgba(28, 25, 22, 0.4) 60%, rgba(28, 25, 22, 0.55) 100%);
 }
 
 .hero-content {
@@ -344,44 +344,43 @@ section { padding: clamp(var(--space-10), 8vw, var(--space-16)) 0; }
   text-align: center;
 }
 
-.hero-label {
-  font-family: 'Georgia', serif;
-  font-size: 0.85rem;
-  font-style: italic;
-  font-weight: 400;
-  color: rgba(245, 240, 235, 0.6);
-  letter-spacing: 0.08em;
-  margin-bottom: 12px;
-  opacity: 0;
-  animation: fadeInUp 0.8s var(--ease-out) 0.2s forwards;
-}
-
 /* 縦書きアクセント — 非表示 */
 .hero-vertical {
   display: none;
+}
+
+.hero-sub {
+  font-family: var(--font-display);
+  font-size: clamp(0.95rem, 2.2vw, 1.15rem);
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: 0.18em;
+  margin-bottom: var(--space-5);
+  display: flex; align-items: center; justify-content: center; gap: 1.2em;
+  opacity: 0;
+  animation: fadeInUp 0.8s var(--ease-out) 0.3s forwards;
+}
+
+.hero-sub::before,
+.hero-sub::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.4);
 }
 
 .hero h1 {
   font-family: var(--font-display);
   font-size: clamp(1.6rem, 4vw, 2.4rem);
   font-weight: 700;
-  color: rgba(245, 240, 235, 0.95);
+  color: rgba(255, 255, 255, 0.97);
   line-height: 1.75;
   margin-bottom: var(--space-5);
   letter-spacing: 0.08em;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
   opacity: 0;
-  animation: fadeInUp 0.8s var(--ease-out) 0.4s forwards;
-}
-
-/* h1下の余白調整 */
-
-.hero-lead {
-  font-size: 0.85rem; font-weight: 300;
-  color: rgba(255,255,255,0.55);
-  line-height: 2.1; max-width: 560px;
-  margin: 0 auto var(--space-4);
-  opacity: 0;
-  animation: fadeInUp 0.8s var(--ease-out) 0.6s forwards;
+  animation: fadeInUp 0.8s var(--ease-out) 0.5s forwards;
 }
 
 .hero-actions {
@@ -449,7 +448,7 @@ section { padding: clamp(var(--space-10), 8vw, var(--space-16)) 0; }
 .section-desc {
   font-size: 0.84rem; font-weight: 400;
   color: var(--text-secondary);
-  line-height: 2; max-width: 540px;
+  line-height: 2; max-width: 780px;
   margin-bottom: var(--space-6);
 }
 
@@ -467,6 +466,32 @@ section { padding: clamp(var(--space-10), 8vw, var(--space-16)) 0; }
 .about .asanoha-accent {
   top: 40px; right: -60px;
   opacity: 0.5;
+}
+
+.about-philosophy {
+  position: relative;
+  overflow: hidden;
+  padding-top: clamp(var(--space-8), 5vw, var(--space-10));
+  padding-bottom: clamp(var(--space-8), 5vw, var(--space-10));
+}
+
+.about-philosophy::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('images/about-bg.jpg') center / cover no-repeat;
+  opacity: 0.75;
+  z-index: 0;
+}
+
+.about-philosophy > * {
+  position: relative;
+  z-index: 1;
+}
+
+.about-intro {
+  max-width: 780px;
+  margin: 0 auto;
 }
 
 .about-grid {
@@ -580,19 +605,24 @@ section { padding: clamp(var(--space-10), 8vw, var(--space-16)) 0; }
 }
 
 .strength-item {
+  position: relative;
   padding: 36px 28px;
   background: var(--kinari);
   display: flex; flex-direction: column; gap: var(--space-4);
   transition: background var(--duration-normal) var(--ease-out);
+  overflow: hidden;
 }
 
 .strength-item:hover { background: var(--kinari-deep); }
 
-.strength-number {
-  font-family: var(--font-display);
-  font-size: 1.5rem; font-weight: 400;
+.strength-icon {
+  position: absolute;
+  top: -12px; right: -8px;
+  font-size: 9rem;
+  color: var(--kitsune);
+  opacity: 0.07;
   line-height: 1;
-  color: var(--hai);
+  pointer-events: none;
 }
 
 .strength-rule {
@@ -638,16 +668,10 @@ section { padding: clamp(var(--space-10), 8vw, var(--space-16)) 0; }
 
 .service-card-body { padding: 28px; position: relative; }
 
-.service-number {
-  font-family: var(--font-display);
-  font-size: 0.9rem; color: var(--hai);
-  letter-spacing: 0.12em; margin-bottom: var(--space-2);
-}
-
 .service-card h3 {
   font-family: var(--font-display);
-  font-size: 1.08rem; font-weight: 700;
-  color: var(--ink); margin-bottom: var(--space-2); letter-spacing: 0.04em;
+  font-size: 1.25rem; font-weight: 700;
+  color: var(--ink); margin-bottom: var(--space-3); letter-spacing: 0.04em;
 }
 
 .service-card p {
@@ -705,10 +729,12 @@ section { padding: clamp(var(--space-10), 8vw, var(--space-16)) 0; }
 }
 
 .flow-card-num {
-  font-family: var(--font-display);
-  font-size: 1.3rem; font-weight: 400;
+  font-family: 'Playfair Display', 'Georgia', serif;
+  font-size: 2rem; font-weight: 400;
+  font-style: italic;
   line-height: 1;
-  color: var(--hai);
+  color: var(--akane-soft);
+  letter-spacing: 0.06em;
 }
 
 .flow-card-arrow {
@@ -928,11 +954,32 @@ section { padding: clamp(var(--space-10), 8vw, var(--space-16)) 0; }
   padding: clamp(var(--space-8), 5vw, var(--space-10)) 0;
   text-align: center;
   background: var(--kinari);
+  overflow: hidden;
+}
+
+/* 和紙テクスチャ */
+.cta-section::before {
+  content: "";
+  position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E");
+  background-size: 256px 256px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* 紗綾形模様 — やや濃いめ */
+.cta-section::after {
+  content: "";
+  position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cpath d='M0 20h10v-10h10v-10M20 0v10h10v10h10M40 20h-10v10h-10v10M20 40v-10h-10v-10h-10' fill='none' stroke='%23C8A87E' stroke-width='0.5' opacity='0.09'/%3E%3C/svg%3E");
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .cta-bg { display: none; }
 
-.cta-section .container { position: relative; }
+.cta-section .container { position: relative; z-index: 1; }
 
 .cta-section p {
   font-size: 1.1rem; color: var(--ink);
@@ -1041,7 +1088,7 @@ section { padding: clamp(var(--space-10), 8vw, var(--space-16)) 0; }
 
 .page-header-bg {
   position: absolute; inset: 0;
-  background: url('images/hero-bg.jpg') center center / cover no-repeat;
+  background: url('images/hero-bg.png') center center / cover no-repeat;
 }
 
 .page-header-bg::after {
@@ -1215,9 +1262,11 @@ section { padding: clamp(var(--space-10), 8vw, var(--space-16)) 0; }
   .hamburger.active span:nth-child(2) { opacity: 0; }
   .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 
-  .hero { padding: 120px 0 80px; min-height: auto; }
+  .hero { padding: 100px 0 48px; min-height: 50vh; }
   .hero-bg { background-size: cover; background-position: center center; }
-  .hero h1 { font-size: 1.5rem; }
+  .hero-sub { font-size: 0.85rem; letter-spacing: 0.12em; margin-bottom: var(--space-3); }
+  .hero-sub::before, .hero-sub::after { width: 24px; }
+  .hero h1 { font-size: 1.5rem; line-height: 1.7; }
   .hero-vertical { display: none; }
 
   .about-grid { grid-template-columns: 1fr; gap: 32px; }
@@ -1257,7 +1306,9 @@ section { padding: clamp(var(--space-10), 8vw, var(--space-16)) 0; }
 }
 
 @media (max-width: 480px) {
-  .hero h1 { font-size: 1.3rem; }
+  .hero h1 { font-size: 1.2rem; }
+  .hero-sub { font-size: 0.75rem; gap: 0.8em; }
+  .hero-sub::before, .hero-sub::after { width: 20px; }
   .hero-actions { flex-direction: column; align-items: flex-start; }
   .section-heading { font-size: 1.25rem; }
 
@@ -1266,24 +1317,6 @@ section { padding: clamp(var(--space-10), 8vw, var(--space-16)) 0; }
   .confirm-table td { display: block; }
 }
 
-/* ============================================
-   SERVICE CARD LINK
-   ============================================ */
-.service-card-link {
-  display: inline-block;
-  margin-top: 10px;
-  font-size: 0.78rem;
-  color: var(--akane);
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  transition: color var(--duration-fast) var(--ease-out);
-}
-.service-card-link::after {
-  content: " \2192";
-}
-.service-card-link:hover {
-  color: var(--akane-deep);
-}
 
 /* ============================================
    SERVICE DETAIL PAGE

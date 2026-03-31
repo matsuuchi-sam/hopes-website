@@ -92,7 +92,7 @@ EOM;
 
 ━━━━━━━━━━━━━━━━━━━━
 司法書士法人ホープス
-〒150-0002 〒150-0002 東京都渋谷区渋谷二丁目2番4号 青山アルコープ402号室
+〒150-0002 東京都渋谷区渋谷二丁目2番4号 青山アルコープ402号室
 TEL: 03-6450-6794
 E-mail: info@shihousyoshi-hopes.jp
 ━━━━━━━━━━━━━━━━━━━━
@@ -205,7 +205,8 @@ EOM;
     const hamburger = document.getElementById('hamburger');
     const navList = document.getElementById('navList');
     hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
+      const isOpen = hamburger.classList.toggle('active');
+      hamburger.setAttribute('aria-expanded', isOpen);
       navList.classList.toggle('active');
     });
     navList.querySelectorAll('a').forEach(link => {

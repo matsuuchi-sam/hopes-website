@@ -4,10 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="images/favicon.ico">
+
+  <!-- パフォーマンス: preconnect / dns-prefetch -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://www.google.com">
+  <link rel="dns-prefetch" href="https://maps.googleapis.com">
+
   <title>司法書士法人ホープス | 渋谷区の相続・遺言・不動産登記・会社設立</title>
   <meta name="description" content="東京都渋谷区の司法書士法人ホープス。相続手続・遺言書作成・不動産登記・会社設立についてわかりやすく丁寧にサポート。渋谷駅徒歩7分、表参道駅徒歩10分。初回相談無料。メール・LINE・オンライン対応可。">
-  <meta name="keywords" content="司法書士,渋谷区,相続,遺言書作成,不動産登記,会社設立,商業登記,司法書士法人ホープス">
+  <meta name="geo.region" content="JP-13">
+  <meta name="geo.placename" content="渋谷区">
+  <meta name="geo.position" content="35.6605;139.7061">
   <link rel="canonical" href="https://www.shihousyoshi-hopes.jp/">
+  <link rel="alternate" hreflang="ja" href="https://www.shihousyoshi-hopes.jp/">
 
   <!-- OGP -->
   <meta property="og:type" content="website">
@@ -16,15 +26,16 @@
   <meta property="og:url" content="https://www.shihousyoshi-hopes.jp/">
   <meta property="og:site_name" content="司法書士法人ホープス">
   <meta property="og:locale" content="ja_JP">
-  <meta property="og:image" content="https://www.shihousyoshi-hopes.jp/images/hero-bg.jpg">
+  <meta property="og:image" content="https://www.shihousyoshi-hopes.jp/images/hero-bg.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="司法書士法人ホープス | 渋谷区の相続・遺言・不動産登記・会社設立">
   <meta name="twitter:description" content="東京都渋谷区の司法書士法人ホープス。相続・遺言・不動産登記・会社設立をわかりやすく丁寧にサポート。初回相談無料。">
-  <meta name="twitter:image" content="https://www.shihousyoshi-hopes.jp/images/hero-bg.jpg">
+  <meta name="twitter:image" content="https://www.shihousyoshi-hopes.jp/images/hero-bg.png">
 
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/light/style.css">
 
   <!-- 構造化データ: LocalBusiness + LegalService -->
   <script type="application/ld+json">
@@ -43,8 +54,28 @@
       "@type": "Person",
       "name": "高橋望",
       "jobTitle": "代表社員",
-      "description": "司法書士。令和元年司法書士試験合格。令和3年に独立開業し司法書士法人ホープスを設立。相続・遺言・登記を専門とし、予防法務の観点からわかりやすい法律サービスを提供。"
+      "description": "司法書士。令和元年司法書士試験合格。令和3年に独立開業し司法書士法人ホープスを設立。相続・遺言・登記を専門とし、予防法務の観点からわかりやすい法律サービスを提供。",
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "日本大学法学部"
+      },
+      "knowsAbout": ["相続手続", "遺言書作成", "不動産登記", "会社設立", "商業登記", "予防法務"],
+      "memberOf": {
+        "@type": "Organization",
+        "name": "東京司法書士会"
+      },
+      "identifier": {
+        "@type": "PropertyValue",
+        "name": "司法書士登録番号",
+        "value": "東京第8362号"
+      }
     },
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "minValue": 1
+    },
+    "knowsLanguage": "ja",
+    "paymentAccepted": "現金, 銀行振込",
     "address": {
       "@type": "PostalAddress",
       "postalCode": "150-0002",
@@ -60,6 +91,10 @@
     },
     "areaServed": [
       { "@type": "City", "name": "渋谷区" },
+      { "@type": "City", "name": "港区" },
+      { "@type": "City", "name": "目黒区" },
+      { "@type": "City", "name": "世田谷区" },
+      { "@type": "City", "name": "新宿区" },
       { "@type": "AdministrativeArea", "name": "東京都" }
     ],
     "serviceType": [
@@ -78,21 +113,70 @@
           "name": "相続による名義変更",
           "price": "45000",
           "priceCurrency": "JPY",
-          "description": "遺産分割協議書作成、相続財産調査、相続関係説明図の作成など一括対応"
+          "description": "遺産分割協議書作成、相続財産調査、相続関係説明図の作成など一括対応。実費: 固定資産税評価額×0.4%の登録免許税"
+        },
+        {
+          "@type": "Offer",
+          "name": "遺言書作成（自筆証書）",
+          "price": "32500",
+          "priceCurrency": "JPY",
+          "description": "自筆証書遺言の作成支援"
         },
         {
           "@type": "Offer",
           "name": "遺言書作成（公正証書）",
           "price": "65000",
           "priceCurrency": "JPY",
-          "description": "公正証書遺言の原案作成から公証役場との打ち合わせ、証人手配まで"
+          "description": "公正証書遺言の原案作成から公証役場との打ち合わせ、証人手配まで。実費: 公証人手数料"
+        },
+        {
+          "@type": "Offer",
+          "name": "住所・氏名の変更登記",
+          "price": "10000",
+          "priceCurrency": "JPY",
+          "description": "不動産の住所変更・氏名変更登記。実費: 不動産個数×1,000円"
+        },
+        {
+          "@type": "Offer",
+          "name": "抵当権抹消",
+          "price": "15000",
+          "priceCurrency": "JPY",
+          "description": "住宅ローン完済時等の抵当権抹消登記。実費: 不動産個数×1,000円"
+        },
+        {
+          "@type": "Offer",
+          "name": "売買による所有権移転",
+          "price": "30000",
+          "priceCurrency": "JPY",
+          "description": "不動産売買に伴う所有権移転登記。実費: 土地1.5%、建物2%の登録免許税"
         },
         {
           "@type": "Offer",
           "name": "株式会社設立",
           "price": "80000",
           "priceCurrency": "JPY",
-          "description": "ヒアリングから定款作成、登記申請まで一貫サポート"
+          "description": "ヒアリングから定款作成、登記申請まで一貫サポート。実費: 資本金×0.7%（最低15万円）+定款認証約53,000円"
+        },
+        {
+          "@type": "Offer",
+          "name": "役員変更登記",
+          "price": "15000",
+          "priceCurrency": "JPY",
+          "description": "取締役・代表取締役等の役員変更登記。実費: 資本金1億円以下10,000円/超過30,000円"
+        },
+        {
+          "@type": "Offer",
+          "name": "本店移転登記（同一管轄）",
+          "price": "25000",
+          "priceCurrency": "JPY",
+          "description": "同一法務局管轄内での本店移転登記。実費: 30,000円"
+        },
+        {
+          "@type": "Offer",
+          "name": "本店移転登記（他管轄）",
+          "price": "50000",
+          "priceCurrency": "JPY",
+          "description": "異なる法務局管轄への本店移転登記。実費: 60,000円"
         }
       ]
     },
@@ -103,7 +187,7 @@
       "closes": "18:00"
     },
     "priceRange": "¥10,000〜",
-    "image": "https://www.shihousyoshi-hopes.jp/images/hero-bg.jpg",
+    "image": "https://www.shihousyoshi-hopes.jp/images/hero-bg.png",
     "sameAs": []
   }
   </script>
@@ -127,7 +211,7 @@
         "name": "初回相談は無料ですか？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "はい、初回のご相談は無料です。対面（渋谷の事務所）またはオンライン（WEB会議）のどちらでもご相談いただけます。メールやLINEでのお問い合わせにも対応しています。"
+          "text": "はい、初回のご相談は無料です。費用が気になる方もまずはお気軽にお問い合わせください。正式なご依頼後に報酬が発生いたします。"
         }
       },
       {
@@ -143,7 +227,7 @@
         "name": "相続手続の費用はどのくらいかかりますか？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "相続による名義変更は報酬45,000円〜（税別）、実費として固定資産税評価額×0.4%の登録免許税がかかります。案件の内容により変動しますので、正式なお見積りは無料で承っております。"
+          "text": "相続による名義変更は報酬45,000円〜（税別）、実費として固定資産税評価額×0.4%の登録免許税がかかります。案件の内容により変動しますので、詳細は当事務所までお問い合わせください。"
         }
       },
       {
@@ -151,15 +235,15 @@
         "name": "オンラインでの相談は可能ですか？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "はい、メール・LINE・WEB会議に対応しており、全国どこからでもご相談いただけます。対面での面談も渋谷の事務所で承っています。"
+          "text": "はい、WEB会議でのご相談に対応しており、全国どこからでもご依頼いただけます。必要書類は郵送でのやり取りが可能ですので、ご来所が難しい場合もお気軽にご相談ください。"
         }
       },
       {
         "@type": "Question",
-        "name": "会社設立の費用と流れを教えてください",
+        "name": "会社設立の費用はどのくらいかかりますか？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "株式会社の設立は報酬80,000円〜（税別）で、実費として資本金の0.7%（最低15万円）の登録免許税と定款認証費用（約53,000円）がかかります。流れとしては、お問い合わせ→無料相談→ご提案・お見積→ご依頼→手続き完了の5ステップとなります。"
+          "text": "株式会社の設立は報酬80,000円〜（税別）で、実費として資本金の0.7%（最低15万円）の登録免許税と定款認証費用（約53,000円）がかかります。ヒアリングから定款作成・登記申請まで一貫してサポートいたします。"
         }
       }
     ]
@@ -179,6 +263,72 @@
         "item": "https://www.shihousyoshi-hopes.jp/"
       }
     ]
+  }
+  </script>
+
+  <!-- 構造化データ: WebSite（サイト名表示対策） -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "司法書士法人ホープス",
+    "alternateName": ["ホープス", "HOPES"],
+    "url": "https://www.shihousyoshi-hopes.jp/"
+  }
+  </script>
+
+  <!-- 構造化データ: HowTo（ご利用の流れ — AIO対策） -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "司法書士法人ホープスへのご依頼の流れ",
+    "description": "司法書士法人ホープスに相続・不動産登記・会社設立等をご依頼いただく際の手順です。初回相談は無料です。",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "お問い合わせ",
+        "text": "お問い合わせフォームまたはお電話（03-6450-6794）にてお気軽にご連絡ください。"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "ご相談（無料）",
+        "text": "対面（渋谷の事務所）またはオンライン（WEB会議）にて、ご状況を詳しくお伺いします。初回相談は無料です。"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "ご提案・お見積",
+        "text": "最適な手続の進め方と費用をご提示いたします。"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "ご依頼",
+        "text": "内容にご納得いただけましたら正式にお申し込みいただきます。"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 5,
+        "name": "手続き完了",
+        "text": "迅速に手続を進め、完了後もアフターフォローいたします。"
+      }
+    ]
+  }
+  </script>
+
+  <!-- 構造化データ: speakable（音声検索・AIアシスタント対策） -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "司法書士法人ホープス | 渋谷区の相続・遺言・不動産登記・会社設立",
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": [".hero-content", ".about-text", ".faq-answer-inner"]
+    }
   }
   </script>
 </head>
@@ -212,22 +362,30 @@
     <div class="hero-bg" role="img" aria-label="相談風景"></div>
     <div class="hero-vertical" aria-hidden="true">司法書士法人ホープス</div>
     <div class="hero-content">
+      <p class="hero-sub">真摯にお客様のご要望に応える</p>
       <h1>どこよりも気軽に頼れる<br>司法書士事務所へ</h1>
-      <p class="hero-lead">
-        不動産登記、会社法人登記、相続遺言業務など<br>
-        時代が求める法務ニーズに対応する専門家です。<br>
-        当事務所はお客様のご希望や事情をお伺いし、<br>
-        お客様に必要な専門手続きをワンストップでご提供致します。
-      </p>
     </div>
     <div class="hero-pattern"></div>
   </section>
 
-  <!-- About -->
-  <section class="about" id="about">
+  <!-- About: 事務所紹介 -->
+  <section class="about about-philosophy" id="about">
     <div class="asanoha-accent" aria-hidden="true"></div>
     <div class="container">
-      <h2 class="section-heading fade-in">私たちについて</h2>
+      <h2 class="section-heading fade-in">司法書士法人ホープスについて</h2>
+
+      <div class="about-intro fade-in fade-in-d1">
+        <p class="about-text">司法書士法人ホープスは、不動産登記、会社法人登記、相続遺言業務など時代が求める法務ニーズに応える専門家です。近年、司法書士業務は多様化しており、従来の司法書士業務だけでは網羅できない複雑なご依頼も増えてきています。</p>
+        <p class="about-text">当事務所はお客様のご希望や事情をお伺いし、お客様に必要な専門手続きをワンストップでご提供いたします。案件によりましては他分野の専門家の助言も請いながら事案解決に向けて最善の方法をご提案させていただきます。</p>
+        <p class="about-text">当事務所は如何にお客様のお力になれるかを考え、「お客様の人生のパートナー」になれるよう日々業務に取り組んで参ります。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Message: 代表挨拶 -->
+  <section class="about" id="message">
+    <div class="container">
+      <h2 class="section-heading fade-in">代表挨拶</h2>
 
       <div class="about-grid">
         <div class="about-photo fade-in">
@@ -238,17 +396,10 @@
             <p class="about-name">高橋 望</p>
             <div class="hanko" aria-hidden="true"></div>
           </div>
-          <p class="about-role">司法書士法人ホープス 代表社員</p>
-          <p class="about-text">
-            予防法務の重要性を学んだことから司法書士を志しました。
-            「高橋さんにお願いして本当によかった」というお客様の言葉が一番のやりがいです。
-            複雑な法律知識もわかりやすくお伝えすることに力を入れています。
-          </p>
-          <p class="about-text">
-            「どこよりも気軽に頼れる事務所」を目標に、お客様が法律で困ることなく
-            輝かしい将来に向かえるようサポートいたします。メール・LINE・WEB会議にも対応し、
-            場所を選ばず柔軟にお手伝いいたします。
-          </p>
+          <p class="about-role">司法書士法人ホープス 代表社員<br><small>東京司法書士会所属（登録番号 東京第8362号）</small></p>
+          <p class="about-text">私は19歳の時に司法書士事務所でアルバイトを始めました。その時お世話になった司法書士から「予防法務」というものを教わりました。「予防法務」とは、法的な争いごとが起きないようにあらかじめ対策を講じることをいいます。自分も「予防法務でトラブルを未然に防ぎ、成長する多くの企業やお客様のお役に立ちたい。」という想いから司法書士を目指しました。</p>
+          <p class="about-text">そして現在、業務を通してお客様をサポートさせてもらう中で、「高橋さんにお願いして本当によかった。」と言ってもらえることがやりがいになっています。また法律という難しい内容も、お客様が理解できるようにできるだけ噛み砕いてお伝えしています。お客様がリラックスして相談してもらえるように努めておりますので、ぜひお気軽にご連絡いただけたらと思います。</p>
+          <p class="about-text">これからもお客さまが法律に関わることで困難がなく、輝かしい未来に向かえますように真摯にサポートさせていただきます。</p>
           <div class="about-career">
             <p class="about-career-title">経歴</p>
             <ul class="career-list">
@@ -272,19 +423,19 @@
 
       <div class="strengths-grid">
         <div class="strength-item fade-in fade-in-d1">
-          <p class="strength-number" aria-hidden="true">一</p>
+          <i class="ph-light ph-handshake strength-icon" aria-hidden="true"></i>
           <h3>広い専門家ネットワーク</h3>
           <div class="strength-rule" aria-hidden="true"></div>
           <p>弁護士・税理士・土地家屋調査士など、各分野の専門家と連携。複雑な案件もワンストップで対応いたします。</p>
         </div>
         <div class="strength-item fade-in fade-in-d2">
-          <p class="strength-number" aria-hidden="true">二</p>
+          <i class="ph-light ph-book-open-text strength-icon" aria-hidden="true"></i>
           <h3>常に最新の知識を共有</h3>
           <div class="strength-rule" aria-hidden="true"></div>
           <p>法改正や最新判例を常にキャッチアップ。正確で最新の情報をもとにしたアドバイスを提供します。</p>
         </div>
         <div class="strength-item fade-in fade-in-d3">
-          <p class="strength-number" aria-hidden="true">三</p>
+          <i class="ph-light ph-arrows-out strength-icon" aria-hidden="true"></i>
           <h3>迅速・柔軟な対応</h3>
           <div class="strength-rule" aria-hidden="true"></div>
           <p>メール・LINE・WEB会議に対応し、全国どこからでもご相談可能。スピーディーかつ丁寧にサービスを提供します。</p>
@@ -303,7 +454,6 @@
         <div class="service-card fade-in fade-in-d1">
           <img src="images/sec02-img01.jpg" alt="相続手続" class="service-card-img" loading="lazy" decoding="async">
           <div class="service-card-body">
-            <p class="service-number">01</p>
             <h3>相続手続</h3>
             <p>遺産分割協議書の作成、相続財産調査、相続関係説明図の作成など、相続に関するお手続を一括でサポート。いつまでに何をすべきか、丁寧にご案内します。</p>
           </div>
@@ -311,7 +461,6 @@
         <div class="service-card fade-in fade-in-d2">
           <img src="images/sec02-img02.jpg" alt="遺言書作成支援" class="service-card-img" loading="lazy" decoding="async">
           <div class="service-card-body">
-            <p class="service-number">02</p>
             <h3>遺言書作成支援</h3>
             <p>公正証書遺言の原案作成から公証役場との打ち合わせ、証人の手配まで。ご本人の想いを正確に反映した遺言書づくりをお手伝いいたします。</p>
           </div>
@@ -319,7 +468,6 @@
         <div class="service-card fade-in fade-in-d3">
           <img src="images/sec02-img03.jpg" alt="不動産登記" class="service-card-img" loading="lazy" decoding="async">
           <div class="service-card-body">
-            <p class="service-number">03</p>
             <h3>不動産登記</h3>
             <p>売買・贈与・住所変更など、不動産に関する登記手続の全般に対応。現在の登記状態の確認から申請まで、安心してお任せください。</p>
           </div>
@@ -327,7 +475,6 @@
         <div class="service-card fade-in fade-in-d4">
           <img src="images/sec02-img04.jpg" alt="会社設立・商業登記" class="service-card-img" loading="lazy" decoding="async">
           <div class="service-card-body">
-            <p class="service-number">04</p>
             <h3>会社設立・商業登記</h3>
             <p>株式会社・合同会社の設立から、役員変更・本店移転などの各種商業登記まで。ヒアリングから登記完了まで一貫してサポートします。</p>
           </div>
@@ -344,7 +491,7 @@
       <div class="flow-timeline">
         <div class="flow-card">
           <div class="flow-card-head">
-            <span class="flow-card-num" aria-hidden="true">一</span>
+            <span class="flow-card-num" aria-hidden="true">1</span>
             <span class="flow-card-arrow" aria-hidden="true">
               <svg width="20" height="10" viewBox="0 0 20 10" fill="none"><path d="M0 5h16M13 1l4 4-4 4" stroke="currentColor" stroke-width="1.2"/></svg>
             </span>
@@ -354,7 +501,7 @@
         </div>
         <div class="flow-card">
           <div class="flow-card-head">
-            <span class="flow-card-num" aria-hidden="true">二</span>
+            <span class="flow-card-num" aria-hidden="true">2</span>
             <span class="flow-card-arrow" aria-hidden="true">
               <svg width="20" height="10" viewBox="0 0 20 10" fill="none"><path d="M0 5h16M13 1l4 4-4 4" stroke="currentColor" stroke-width="1.2"/></svg>
             </span>
@@ -364,7 +511,7 @@
         </div>
         <div class="flow-card">
           <div class="flow-card-head">
-            <span class="flow-card-num" aria-hidden="true">三</span>
+            <span class="flow-card-num" aria-hidden="true">3</span>
             <span class="flow-card-arrow" aria-hidden="true">
               <svg width="20" height="10" viewBox="0 0 20 10" fill="none"><path d="M0 5h16M13 1l4 4-4 4" stroke="currentColor" stroke-width="1.2"/></svg>
             </span>
@@ -374,7 +521,7 @@
         </div>
         <div class="flow-card">
           <div class="flow-card-head">
-            <span class="flow-card-num" aria-hidden="true">四</span>
+            <span class="flow-card-num" aria-hidden="true">4</span>
             <span class="flow-card-arrow" aria-hidden="true">
               <svg width="20" height="10" viewBox="0 0 20 10" fill="none"><path d="M0 5h16M13 1l4 4-4 4" stroke="currentColor" stroke-width="1.2"/></svg>
             </span>
@@ -384,7 +531,7 @@
         </div>
         <div class="flow-card">
           <div class="flow-card-head">
-            <span class="flow-card-num" aria-hidden="true">五</span>
+            <span class="flow-card-num" aria-hidden="true">5</span>
           </div>
           <h4>手続き完了</h4>
           <p>迅速に手続を進め<br>完了後もフォローいたします</p>
@@ -423,9 +570,9 @@
           <tbody>
             <tr><td>住所・氏名の変更</td><td>10,000円〜</td><td>不動産個数 × 1,000円</td></tr>
             <tr><td>抵当権抹消</td><td>15,000円〜</td><td>不動産個数 × 1,000円</td></tr>
-            <tr><td>売買による所有権移転</td><td>30,000円〜</td><td>土地1.5%、建物2%</td></tr>
-            <tr><td>抵当権設定</td><td>30,000円〜</td><td>債権額 × 0.4%</td></tr>
-            <tr><td>建物新築登記</td><td>15,000円〜</td><td>評価額 × 0.4%</td></tr>
+            <tr><td>売買による所有権移転</td><td>30,000円〜</td><td>固定資産税評価額 × 2%（土地は × 1.5%）</td></tr>
+            <tr><td>抵当権設定</td><td>30,000円〜</td><td>債権額 × 0.4%（家屋証明書使用時 0.1%）</td></tr>
+            <tr><td>建物新築登記</td><td>15,000円〜</td><td>固定資産税評価額 × 0.4%（家屋証明書使用時 0.1%〜0.15%）</td></tr>
           </tbody>
         </table></div>
       </div>
@@ -450,8 +597,8 @@
       </div>
 
       <p class="price-note">
-        ※ 上記の報酬額は目安です。案件の内容や難易度に応じて増減する場合があります。<br>
-        ※ 正式なお見積りは無料で承ります。お気軽にお問い合わせください。
+        ※ 料金は内容に応じて増減することや、時期により改定されることがあります。<br>
+        ※ 料金についての詳細は当事務所までお問い合わせください。
       </p>
     </div>
   </section>
@@ -469,7 +616,7 @@
             <span class="faq-question-icon"></span>
           </button>
           <div class="faq-answer">
-            <div class="faq-answer-inner">はい、初回のご相談は無料です。対面（渋谷の事務所）またはオンライン（WEB会議）のどちらでもご相談いただけます。メールやLINEでのお問い合わせにも対応しています。</div>
+            <div class="faq-answer-inner">はい、初回のご相談は無料です。費用が気になる方もまずはお気軽にお問い合わせください。正式なご依頼後に報酬が発生いたします。</div>
           </div>
         </div>
         <div class="faq-item">
@@ -479,7 +626,7 @@
             <span class="faq-question-icon"></span>
           </button>
           <div class="faq-answer">
-            <div class="faq-answer-inner">相続による名義変更は報酬45,000円〜（税別）、実費として固定資産税評価額×0.4%の登録免許税がかかります。案件の内容により変動しますので、正式なお見積りは無料で承っております。</div>
+            <div class="faq-answer-inner">相続による名義変更は報酬45,000円〜（税別）、実費として固定資産税評価額×0.4%の登録免許税がかかります。案件の内容により変動しますので、詳細は当事務所までお問い合わせください。</div>
           </div>
         </div>
         <div class="faq-item">
@@ -489,17 +636,17 @@
             <span class="faq-question-icon"></span>
           </button>
           <div class="faq-answer">
-            <div class="faq-answer-inner">はい、メール・LINE・WEB会議に対応しており、全国どこからでもご相談いただけます。対面での面談も渋谷の事務所で承っています。</div>
+            <div class="faq-answer-inner">はい、WEB会議でのご相談に対応しており、全国どこからでもご依頼いただけます。必要書類は郵送でのやり取りが可能ですので、ご来所が難しい場合もお気軽にご相談ください。</div>
           </div>
         </div>
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">
             <span class="faq-question-label">Q.</span>
-            <span>会社設立の費用と流れを教えてください</span>
+            <span>会社設立の費用はどのくらいかかりますか？</span>
             <span class="faq-question-icon"></span>
           </button>
           <div class="faq-answer">
-            <div class="faq-answer-inner">株式会社の設立は報酬80,000円〜（税別）で、実費として資本金の0.7%（最低15万円）の登録免許税と定款認証費用（約53,000円）がかかります。お問い合わせから無料相談、ご提案・お見積、ご依頼、手続き完了の5ステップで進めます。</div>
+            <div class="faq-answer-inner">株式会社の設立は報酬80,000円〜（税別）で、実費として資本金の0.7%（最低15万円）の登録免許税と定款認証費用（約53,000円）がかかります。ヒアリングから定款作成・登記申請まで一貫してサポートいたします。</div>
           </div>
         </div>
       </div>
@@ -519,8 +666,9 @@
             <tr><th>所在地</th><td>〒150-0002<br>東京都渋谷区渋谷二丁目2番4号<br>青山アルコープ402号室</td></tr>
             <tr><th>電話番号</th><td>03-6450-6794</td></tr>
             <tr><th>メール</th><td>info@shihousyoshi-hopes.jp</td></tr>
+            <tr><th>所属</th><td>東京司法書士会（登録番号 東京第8362号）</td></tr>
             <tr><th>設立</th><td>令和3年10月15日</td></tr>
-            <tr><th>アクセス</th><td>渋谷駅 徒歩7分<br>表参道駅 徒歩10分</td></tr>
+            <tr><th>アクセス</th><td>渋谷駅 徒歩7分<br>表参道駅 徒歩10分<br><small style="color: var(--text-secondary);">青山・恵比寿・原宿エリアからもアクセス良好</small></td></tr>
           </tbody>
         </table>
         <div class="office-map">
@@ -594,7 +742,8 @@
     const navList = document.getElementById('navList');
 
     hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
+      const isOpen = hamburger.classList.toggle('active');
+      hamburger.setAttribute('aria-expanded', isOpen);
       navList.classList.toggle('active');
     });
 
@@ -630,6 +779,7 @@
       faders.forEach(el => obs.observe(el));
     }
     document.getElementById('copyrightYear').textContent = new Date().getFullYear();
+
   </script>
 
 </body>

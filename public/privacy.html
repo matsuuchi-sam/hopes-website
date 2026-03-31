@@ -129,13 +129,13 @@
     <p>個人情報の取扱いに関するお問い合わせ・ご相談は，下記までご連絡ください。</p>
     <ul>
       <li>事務所名：司法書士法人ホープス</li>
-      <li>個人情報管理責任者：代表社員 高橋望</li>
+      <li>個人情報管理責任者：代表社員 高橋望（東京司法書士会所属・登録番号 東京第8362号）</li>
       <li>住所：〒150-0002 東京都渋谷区渋谷二丁目2番4号 青山アルコープ402号室</li>
       <li>電話番号：03-6450-6794</li>
       <li>Eメールアドレス：info@shihousyoshi-hopes.jp</li>
     </ul>
 
-    <p class="privacy-date">制定日：2025年3月1日</p>
+    <p class="privacy-date">制定日：2026年3月31日</p>
 
   </div>
 
@@ -166,7 +166,8 @@
     const hamburger = document.getElementById('hamburger');
     const navList = document.getElementById('navList');
     hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
+      const isOpen = hamburger.classList.toggle('active');
+      hamburger.setAttribute('aria-expanded', isOpen);
       navList.classList.toggle('active');
     });
     navList.querySelectorAll('a').forEach(link => {
