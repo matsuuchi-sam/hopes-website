@@ -25,6 +25,7 @@
   <meta name="twitter:image" content="https://www.shihousyoshi-hopes.jp/images/hero-bg.png">
 
   <link rel="stylesheet" href="style.css">
+  <style>.hp-field{position:absolute;left:-9999px;top:-9999px;opacity:0;height:0;width:0;z-index:-1;}</style>
 
   <!-- 構造化データ: BreadcrumbList -->
   <script type="application/ld+json">
@@ -135,6 +136,13 @@
           <span class="form-error"></span>
         </div>
 
+        <!-- honeypot -->
+        <div class="hp-field" aria-hidden="true">
+          <label for="website">ウェブサイト</label>
+          <input type="text" name="website" id="website" tabindex="-1" autocomplete="off">
+        </div>
+        <input type="hidden" name="form_loaded_at" id="form_loaded_at" value="">
+
         <div class="form-consent">
           <label class="consent-label">
             <input type="checkbox" name="privacy_agree" id="privacy_agree" required>
@@ -188,6 +196,7 @@
       });
     });
     document.getElementById('copyrightYear').textContent = new Date().getFullYear();
+    document.getElementById('form_loaded_at').value = Math.floor(Date.now() / 1000);
 
     /* Form validation */
     const form = document.getElementById('contactForm');

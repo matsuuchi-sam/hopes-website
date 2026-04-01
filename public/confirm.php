@@ -6,6 +6,19 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
   exit;
 }
 
+// Honeypot check
+if (!empty($_POST['website'])) {
+  header('Location: contact.html');
+  exit;
+}
+
+// Submission speed check (reject if submitted within 3 seconds)
+$form_loaded_at = isset($_POST['form_loaded_at']) ? (int)$_POST['form_loaded_at'] : 0;
+if ($form_loaded_at === 0 || (time() - $form_loaded_at) < 3) {
+  header('Location: contact.html');
+  exit;
+}
+
 // CSRF token generation
 $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 
@@ -37,7 +50,10 @@ if (empty($message))       $errors[] = 'お問い合わせ詳細を入力して�
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="images/favicon.ico">
+  <link rel="icon" href="images/favicon.ico" sizes="any">
+  <link rel="icon" href="images/favicon-48x48.png" type="image/png" sizes="48x48">
+  <link rel="icon" href="images/favicon-192x192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
   <title>入力内容の確認 | 司法書士法人ホープス</title>
   <meta name="robots" content="noindex, nofollow">
   <link rel="stylesheet" href="style.css">
