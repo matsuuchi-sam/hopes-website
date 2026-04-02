@@ -117,7 +117,10 @@ EOM;
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="images/favicon.ico">
+  <link rel="icon" href="images/favicon.ico" sizes="any">
+  <link rel="icon" href="images/favicon-48x48.png" type="image/png" sizes="48x48">
+  <link rel="icon" href="images/favicon-192x192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
   <title>送信完了 | 司法書士法人ホープス</title>
   <meta name="robots" content="noindex, nofollow">
   <link rel="stylesheet" href="style.css">
