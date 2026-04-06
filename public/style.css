@@ -1560,3 +1560,96 @@ section { padding: clamp(var(--space-10), 8vw, var(--space-16)) 0; }
   width: auto;
   accent-color: var(--akane);
 }
+
+/* ============================================
+   PRINT
+   ============================================ */
+@media print {
+  /* リセット: 余白・背景 */
+  * { box-shadow: none !important; text-shadow: none !important; }
+  body { font-size: 11pt; line-height: 1.7; color: #1c1916; }
+
+  /* 不要UIを非表示 */
+  .header,
+  .hamburger,
+  .nav-overlay,
+  .back-to-top,
+  .cta-section,
+  .hero-pattern,
+  .hero-actions,
+  .footer-bottom { display: none !important; }
+
+  /* Googleマップiframe非表示 */
+  .office-map iframe { display: none !important; }
+  .office-map { min-height: 0 !important; height: auto !important; }
+
+  /* ヒーロー: 背景画像をやめてシンプルに */
+  .hero {
+    min-height: auto !important;
+    max-height: none !important;
+    padding: 40pt 0 20pt !important;
+    background: var(--sumi) !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .hero-bg { display: none !important; }
+  .hero-sub,
+  .hero h1,
+  .hero-content { opacity: 1 !important; animation: none !important; }
+
+  /* セクション: 1カラム、幅100% */
+  .container { max-width: 100% !important; padding: 0 16pt !important; }
+  section { padding: 16pt 0 !important; }
+
+  /* グリッド → 1カラムだがflex横並びを維持（幅に収まる場合） */
+  .strengths-grid,
+  .services-grid { display: flex !important; flex-wrap: wrap !important; gap: 8pt !important; }
+  .strength-item,
+  .service-card { flex: 1 1 45% !important; margin-bottom: 0 !important; }
+  .flow-grid { display: block !important; }
+  .flow-card { margin-bottom: 8pt; }
+
+  /* カード背景を印刷 */
+  .strength-item,
+  .service-card,
+  .flow-card {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* 料金表 */
+  .price-table { font-size: 10pt; }
+  .price-table th,
+  .price-table td { padding: 6pt 8pt !important; }
+
+  /* FAQ: 全て開いた状態で印刷 */
+  .faq-answer {
+    max-height: none !important;
+    overflow: visible !important;
+    padding: 8pt 0 !important;
+  }
+  .faq-question::after { display: none !important; }
+
+  /* フッター */
+  .footer {
+    padding: 16pt 0 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* リンクURLを表示しない（見た目を保つ） */
+  a[href]::after { content: none !important; }
+
+  /* 改ページ制御: セクション内で切れないようにし、収まらない場合は自然に流す */
+  .about, .strengths, .flow, .faq-section, .office { break-inside: avoid; page-break-inside: avoid; }
+  .price-section { break-before: page; page-break-before: always; }
+  .price-table tr { break-inside: avoid; page-break-inside: avoid; }
+  h2 { break-after: avoid; page-break-after: avoid; }
+  .section-heading { margin-bottom: 8pt !important; }
+  .section-desc { margin-bottom: 12pt !important; }
+
+  /* 代表挨拶: 写真横並び維持 */
+  .about-layout { gap: 12pt !important; }
+  .about-photo { max-width: 160pt !important; }
+  .about-photo img { max-height: 200pt !important; }
+}
