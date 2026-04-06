@@ -49,6 +49,13 @@ if (empty($message))       $errors[] = 'お問い合わせ詳細を入力して�
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TV6RBT6D');</script>
+  <!-- End Google Tag Manager -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="images/favicon.ico" sizes="any">
   <link rel="icon" href="images/favicon-48x48.png" type="image/png" sizes="48x48">
@@ -59,6 +66,10 @@ if (empty($message))       $errors[] = 'お問い合わせ詳細を入力して�
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="contact-page confirm-page">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TV6RBT6D"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
   <!-- Header -->
   <header class="header" id="header">
